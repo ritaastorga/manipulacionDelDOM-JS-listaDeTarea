@@ -35,4 +35,9 @@ function agregarTarea() {
   }
 }
 
+function completarTarea(e) {
+  let tarea = e.target.parentNode.parentNode;
+  tarea.classList.toggle("completada");
+}
+
 boton.addEventListener("click", agregarTarea);
