@@ -20,6 +20,9 @@ function agregarTarea() {
     // Iconos
 
     let completar = document.createElement("i");
-    completar.classList;
+    completar.classList.add("bi", "bi-check-circle-fill", "iconoCompletar");
+
+    let eliminar = document.createElement("i");
+    eliminar.classList.add("bi", "bi-trash3-fill", "iconoEliminar");
   }
 }
