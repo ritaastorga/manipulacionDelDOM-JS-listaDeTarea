@@ -1,6 +1,6 @@
 const input = document.getElementById("ingresarTarea");
 const boton = document.querySelector("button");
-const listaDeTarea = document.getElementById("listaDetarea");
+const listaDeTarea = document.getElementById("listaDeTareas");
 
 function agregarTarea() {
   if (input.value) {
@@ -26,5 +26,13 @@ function agregarTarea() {
     eliminar.classList.add("bi", "bi-trash3-fill", "iconoEliminar");
 
     iconos.append(completar, eliminar);
+
+    // Agregar tarea a la lista
+
+    listaDeTarea.appendChild(tareaNueva);
+  } else {
+    alert("Por favor ingresa una tarea");
   }
 }
+
+boton.addEventListener("click", agregarTarea);
