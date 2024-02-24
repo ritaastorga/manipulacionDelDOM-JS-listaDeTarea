@@ -1,6 +1,6 @@
 const input = document.getElementById("ingresarTarea");
 const boton = document.querySelector("button");
-const listaDeTarea = document.getElementById("listaDetarea");
+const listaDeTarea = document.getElementById("listaDeTareas");
 
 function agregarTarea() {
   if (input.value) {
@@ -20,5 +20,24 @@ function agregarTarea() {
     // Iconos
 
     let completar = document.createElement("i");
+    completar.classList.add("bi", "bi-check-circle-fill", "iconoCompletar");
+
+    let eliminar = document.createElement("i");
+    eliminar.classList.add("bi", "bi-trash3-fill", "iconoEliminar");
+
+    iconos.append(completar, eliminar);
+
+    // Agregar tarea a la lista
+
+    listaDeTarea.appendChild(tareaNueva);
+  } else {
+    alert("Por favor ingresa una tarea");
   }
 }
+
+function completarTarea(e) {
+  let tarea = e.target.parentNode.parentNode;
+  tarea.classList.toggle("completada");
+}
+
+boton.addEventListener("click", agregarTarea);
