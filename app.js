@@ -24,5 +24,7 @@ function agregarTarea() {
 
     let eliminar = document.createElement("i");
     eliminar.classList.add("bi", "bi-trash3-fill", "iconoEliminar");
+
+    iconos.append(completar, eliminar);
   }
 }
