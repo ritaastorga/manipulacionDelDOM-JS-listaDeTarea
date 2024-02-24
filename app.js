@@ -20,5 +20,6 @@ function agregarTarea() {
     // Iconos
 
     let completar = document.createElement("i");
+    completar.classList;
   }
 }
