@@ -21,9 +21,11 @@ function agregarTarea() {
 
     let completar = document.createElement("i");
     completar.classList.add("bi", "bi-check-circle-fill", "iconoCompletar");
+    completar.addEventListener("click", completarTarea);
 
     let eliminar = document.createElement("i");
     eliminar.classList.add("bi", "bi-trash3-fill", "iconoEliminar");
+    eliminar.addEventListener("click", eliminarTarea);
 
     iconos.append(completar, eliminar);
 
@@ -37,7 +39,12 @@ function agregarTarea() {
 
 function completarTarea(e) {
   let tarea = e.target.parentNode.parentNode;
-  tarea.classList.toggle("completada");
+  tarea.classList.toggle("tareaCompletada");
+}
+
+function eliminarTarea(e) {
+  let tarea = e.target.parentNode.parentNode;
+  tarea.remove();
 }
 
 boton.addEventListener("click", agregarTarea);
