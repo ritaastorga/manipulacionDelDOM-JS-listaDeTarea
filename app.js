@@ -35,6 +35,10 @@ function agregarTarea() {
   } else {
     alert("Por favor ingresa una tarea");
   }
+
+  // Limpiar input
+
+  input.value = "";
 }
 
 function completarTarea(e) {
